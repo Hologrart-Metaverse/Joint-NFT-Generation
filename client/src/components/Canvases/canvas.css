@@ -1,0 +1,86 @@
+.canvas {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+
+    width: 400px;
+    box-shadow: 0px 0px 10px rgba(228, 228, 228, 0.348);
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    padding: 20px;
+
+    border: 2px solid transparent;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+
+    border-radius: 15px;
+
+    cursor: pointer;
+    transition: 0.3s ease-out;
+}
+.canvas:hover{
+    backdrop-filter: blur(35px);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+.canvas:hover .canvas-title{
+    text-decoration: underline;
+}
+
+.canvas-top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.canvas-top-title p {
+    font-style: italic;
+    color: rgba(200, 200, 200, 0.608);
+}
+
+.canvas-title {
+    flex: 2;
+    letter-spacing: 1px;
+    color: yellow;
+
+    margin: -15px 0;
+}
+
+.canvas-userCount{
+    flex: 1;
+    font-size: 14px;
+    text-align: right;
+    color: rgb(200, 200, 200);
+}
+
+.userCount span {
+    font-weight: 600;
+    font-size: 18px;
+    color: yellow;
+}
+
+
+.canvas-dates {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: rgba(200, 200, 200, 0.608);
+    font-style: italic;
+    font-size: 14px;
+}
+
+
+.canvas-image {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-top: 10px;
+}

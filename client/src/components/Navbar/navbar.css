@@ -1,0 +1,114 @@
+.navbar {
+    width: calc(100vw - 20px);
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    /* border-bottom: 1px solid black; */
+    /* box-shadow: 0px -10px 20px; */
+
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+
+    position: fixed;
+    z-index: 1;
+
+    border: 2px solid transparent;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+
+.navbar_left {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+
+    margin-left: 20px;
+
+    color: rgb(224, 171, 224);
+    font-size: 18px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+}
+
+.links {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar_link {
+    margin-right: 30px;
+    text-decoration: none;
+    font-size: 16px;
+
+    color: white;
+
+    font-weight: 600;
+    line-height: 50px;
+
+    letter-spacing: 1px;
+
+    transition: 1s;
+
+    cursor: pointer;
+}
+
+.navbar_link:hover {
+    font-size: 16px;
+
+    color: rgb(223, 233, 20);
+}
+
+.navbar-profile{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.navbar_right {
+    display: flex;
+    text-align: center;
+    align-items: center;
+
+    margin-right: 20px;
+}
+
+.navbar_right_button {
+    background-image: linear-gradient(rgb(221, 255, 0), rgb(179, 162, 50));
+    border: none;
+    color: rgba(0, 0, 0, 0.612);
+    padding: 8px 10px;
+
+    /* margin-left: 10px; */
+
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+
+    background-color: rgba(0, 0, 0, 0);
+    transition: 1s;
+}
+
+.navbar_right_button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbar_right_button:active {
+    background-image: linear-gradient(rgb(179, 162, 50), rgb(221, 255, 0));
+}
