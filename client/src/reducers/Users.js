@@ -6,6 +6,9 @@ export default (user=[], action) => {
         case "LOGIN":
             return action.payload;
             break;
+        case "LOGOUT":
+            return action.payload;
+            break;
     
         default:
             return user;

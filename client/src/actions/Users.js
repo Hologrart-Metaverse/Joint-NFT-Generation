@@ -19,3 +19,12 @@ export const login = (user) => async (dispatch) => {
         console.log(error);
     }
 }
+
+
+export const logout = () => async (dispatch) => {
+    try {
+        dispatch({ type: "LOGOUT", payload: [] });
+    } catch (error) {
+        console.log(error);
+    }
+}

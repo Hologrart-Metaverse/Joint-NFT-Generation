@@ -33,3 +33,22 @@
 .profile-name {
     color: white;
 }
+
+
+.profile-links {
+    width: 100%;
+    padding: 10px 0;
+    cursor:default;
+    transition: 0.3s;
+}
+.profile-links:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.profile-links-buttons{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}

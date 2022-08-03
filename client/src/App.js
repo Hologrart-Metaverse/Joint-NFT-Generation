@@ -6,12 +6,12 @@ import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 
-import { useSelector } from 'react-redux';
-import { useEffect } from "react";
+// import { useSelector } from 'react-redux';
+// import { useEffect } from "react";
 
 function App() {
-  const user = useSelector((state) => state.user);
-  console.log(user);
+  // const user = useSelector((state) => state.user);
+  // console.log(user);
   const navigation = useNavigate();
   
   return (

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./login.css";
 
 import TextField from '@mui/material/TextField';
@@ -9,14 +9,26 @@ import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { login } from '../../actions/Users';
 
 const Login = () => {
+  const user = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+  const navigation = useNavigate();
+
    const [userLogin, setUserLogin] = useState({
         email: "",
         password: ""
     });
     const [showPassword, setShowPassword] = useState(false);
+
+    useEffect(() => {
+      if (user.length !== 0) {
+        navigation("/");      
+      }
+    }, [user]);
   return (
     <div className='login'>
         <div className='container login-content'>
@@ -49,7 +61,9 @@ const Login = () => {
             </div>
 
             <div className='login-buttons'>
-              <button>Login</button>
+              <button onClick={() => {
+                dispatch(login(userLogin));
+              }}>Login</button>
               <div className='login-buttons-bottom'>
                 <p>Forget your password? <Link to="/forget-my-password">Forget My Password</Link></p>
                 <p>Don't you have an account yet? <Link to="/register">Register</Link></p>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./register.css";
 
 import TextField from '@mui/material/TextField';
@@ -9,15 +9,27 @@ import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { createUser } from '../../actions/Users';
+import { useSelector } from 'react-redux';
 
 const Register = () => {
+  const user = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+  const navigation = useNavigate();
    const [newUser, setNewUser] = useState({
         fullName: "",
         email: "",
         password: ""
     });
     const [showPassword, setShowPassword] = useState(false);
+
+    useEffect(() => {
+      if (user.length !== 0) {
+        navigation("/");
+      }
+    }, [user]);
   return (
     <div className='register'>
         <div className='container register-content'>
@@ -51,7 +63,9 @@ const Register = () => {
             </div>
 
             <div className='register-buttons'>
-              <button>Register</button>
+              <button onClick={() => {
+                dispatch(createUser(newUser))
+              }}>Register</button>
               <div className='register-buttons-bottom'>
                 <p>Forget your password? <Link to="/forget-my-password">Forget My Password</Link></p>
                 <p>Already have an account? <Link to="/">Login</Link></p>
