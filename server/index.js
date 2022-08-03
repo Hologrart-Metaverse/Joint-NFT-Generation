@@ -7,6 +7,7 @@ import dotenv from "dotenv";
 const env = dotenv.config();
 
 import userRoutes from "./routes/User.js";
+import canvasesRoutes from "./routes/Canvas.js";
 
 const app = express();
 
@@ -23,3 +24,4 @@ mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: tr
 
 
 app.use("/user", userRoutes);
+app.use("/canvas", canvasesRoutes);

@@ -1,5 +1,6 @@
 import {Routes, Route, useNavigate} from "react-router-dom";
 import Layout from "./Layout";
+import Admin from "./pages/Admin/Admin";
 import Constructor from "./pages/Constructor/Constructor";
 import Draw from "./pages/Draw/Draw";
 import Home from "./pages/Home/Home";
@@ -26,6 +27,7 @@ function App() {
           <Route path="/draw/:id" element={<Draw />}/>
           
         </Route>
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </div>
   );
