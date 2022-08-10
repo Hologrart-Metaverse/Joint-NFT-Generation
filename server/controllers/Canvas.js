@@ -22,3 +22,15 @@ export const getCanvases = async (req, res) => {
         res.status(404).json({ message: error.message});
     }
 }
+
+
+export const fetchCanvasPixels = async (req, res) => {
+    console.log(req.body);
+    try {
+        const canvasPixels = await Canvases.findOne({_id: req.body.id});
+        res.status(200).json(canvasPixels.pixels);
+        console.log(canvasPixels.pixels);
+    } catch (error) {
+        res.status(404).json({ message: error.message});
+    }
+}

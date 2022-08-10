@@ -41,7 +41,7 @@ const Home = () => {
           <div className='canvases'>
             {
               canvases.map((canvas) => {
-                return <Canvas canvas={canvas} />
+                return <Canvas key={canvas._id} canvas={canvas} />
               })
             }
             {/* <Canvas title="Mona Lisa" width="32" height="64" img={monaLisa} />

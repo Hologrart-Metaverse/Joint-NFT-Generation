@@ -21,11 +21,4 @@ export const getCanvases = () => async (dispatch) => {
 
 
 
-export const editCanvas = (user) => async (dispatch) => {
-    try {
-        const { data } = await api.loginUser(user);
-        dispatch({ type: "LOGIN", payload: data });
-    } catch (error) {
-        console.log(error);
-    }
-}
+

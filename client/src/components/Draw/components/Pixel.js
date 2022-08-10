@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import "../styles/pixel.scss";
 
 const Pixel = (props) => {
-    const { selectedColor } = props;
+    const { color, whose, selectedColor } = props;
 
-    const [pixelColor, setPixelColor] = useState("#fff");
+    const [pixelColor, setPixelColor] = useState(color);
     const [oldColor, setOldColor] = useState(pixelColor);
     const [canChangeColor, setCanChangeColor] = useState(true);
 

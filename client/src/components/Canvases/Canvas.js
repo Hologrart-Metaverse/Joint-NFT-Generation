@@ -8,7 +8,8 @@ const Canvas = (props) => {
   const canvas = props.canvas;
   const navigation = useNavigate();
   return (
-    <div onClick={() => navigation(`/draw/${canvas.canvasName}?width=${canvas.width}&height=${canvas.height}`)} className='canvas'>
+    // <div onClick={() => navigation(`/draw/${canvas.canvasName}?width=${canvas.width}&height=${canvas.height}`)} className='canvas'>
+    <div onClick={() => navigation(`/draw/${canvas.canvasName}?id=${canvas._id}`)} className='canvas'>
       <div className='canvas-top'>
         <div className='canvas-top-title'>
           <p>About:</p>
