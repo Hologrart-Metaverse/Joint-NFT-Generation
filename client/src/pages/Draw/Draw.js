@@ -22,7 +22,7 @@ const Draw = () => {
     <div className='draw'>
         <div className='draw-container'>
           {
-            canvasPixels ? <Editor canvasPixels={canvasPixels} /> : null
+            canvasPixels ? <Editor canvasPixels={canvasPixels} canvas_id={canvas_id} /> : null
           }
             
         </div>

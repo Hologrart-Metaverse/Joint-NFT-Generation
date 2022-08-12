@@ -6,7 +6,7 @@ import DrawingPanel from './DrawingPanel';
 import { SketchPicker } from "react-color";
 import { useSelector } from 'react-redux';
 
-const Editor = ({ canvasPixels }) => {
+const Editor = ({ canvasPixels, canvas_id }) => {
     const user = useSelector((state) => state.user);
     useEffect(() => {
       if (user.length !== 0) {
@@ -33,7 +33,7 @@ const Editor = ({ canvasPixels }) => {
       }
       {
         // canvasPixels[1] ? <DrawingPanel className='DrawingPanel' width={canvasPixels[1].length} height={canvasPixels.length} selectedColor={selectedColor} /> : null
-        canvasPixels[1] ? <DrawingPanel className='DrawingPanel' pixels={canvasPixels} selectedColor={selectedColor} /> : null
+        canvasPixels[1] ? <DrawingPanel className='DrawingPanel' pixels={canvasPixels} canvas_id={canvas_id} selectedColor={selectedColor} /> : null
       }
         
     </div>

@@ -24,12 +24,38 @@ export const getCanvases = async (req, res) => {
 }
 
 
+
+
 export const fetchCanvasPixels = async (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     try {
         const canvasPixels = await Canvases.findOne({_id: req.body.id});
         res.status(200).json(canvasPixels.pixels);
-        console.log(canvasPixels.pixels);
+        // console.log(canvasPixels.pixels);
+    } catch (error) {
+        res.status(404).json({ message: error.message});
+    }
+}
+
+
+export const changePixel = async (req, res) => {
+    const { canvas_id, rowNumber, columnNumber, newColor, whose } = req.body;
+    try {
+        // let canvas = await Canvases.findOne({_id: canvas_id});
+        // canvas.pixels[rowNumber][columnNumber].color = newColor;
+        // canvas.pixels[rowNumber][columnNumber].who = whose;
+        // await canvas.save();
+        // res.status(200).json({canvas: canvas});
+
+        // console.log(canvas.pixels[rowNumber][columnNumber]);
+
+        const filterPixel = `${rowNumber}.${columnNumber}`;
+        console.log(filterPixel);
+
+        // await Canvases.updateOne({_id: canvas_id, pixels: { $elemMatch: { $elemMatch: { id: filterPixel }}}}, {$set: {color: newColor, who: whose}}).then(doc => console.log(doc));
+        // await Canvases.updateOne({_id: canvas_id}, {$set: {"pixels" : {"" : {"id" : filterPixel, color: newColor, who: whose}}}});
+        res.status(200).json({color: newColor});
+      
     } catch (error) {
         res.status(404).json({ message: error.message});
     }

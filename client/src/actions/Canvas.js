@@ -12,10 +12,11 @@ export const fetchCanvasPixels = (id) => async (dispatch) => {
     }
 }
 
-export const updateCanvas = (user) => async (dispatch) => {
+export const updateCanvas = (canvas_id, rowNumber, columnNumber, newColor, whose) => async (dispatch) => {
     try {
-        const { data } = await api.loginUser(user);
-        dispatch({ type: "LOGIN", payload: data });
+        const { data } = await api.changePixel(canvas_id, rowNumber, columnNumber, newColor, whose);
+        console.log(data);
+        dispatch({ type: "CHANGEPIXEL", payload: data });
     } catch (error) {
         console.log(error);
     }

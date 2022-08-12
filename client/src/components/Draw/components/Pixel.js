@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
 import "../styles/pixel.scss";
 
+import { useDispatch, useSelector } from 'react-redux';
+import { updateCanvas } from '../../../actions/Canvas';
+
 const Pixel = (props) => {
-    const { color, whose, selectedColor } = props;
+
+  const user = useSelector((state) => state.user);
+
+    const dispatch = useDispatch();
+    const { columnNumber, color, whose, canvas_id, rowNumber, selectedColor } = props;
 
     const [pixelColor, setPixelColor] = useState(color);
     const [oldColor, setOldColor] = useState(pixelColor);
@@ -10,6 +17,7 @@ const Pixel = (props) => {
 
     const applyColor = () => {
         setPixelColor(selectedColor);
+        dispatch(updateCanvas(canvas_id, rowNumber, columnNumber, pixelColor, user._id));
         setCanChangeColor(false);
     }
 
