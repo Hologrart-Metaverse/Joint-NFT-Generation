@@ -22,6 +22,6 @@ export const fetchCanvases = () => axios.get(fetchCanvasesUrl);
 export const fetchCanvas = (canvas_id) => axios.post(fetchCanvasUrl, {id: canvas_id});
 export const changePixel = 
     (canvas_id, rowNumber, columnNumber, newColor, whose) => 
-        axios.post(changePixelUrl, 
+        axios.patch(changePixelUrl, 
             {canvas_id: canvas_id, rowNumber: rowNumber, columnNumber: columnNumber, newColor: newColor, whose: whose}
         );

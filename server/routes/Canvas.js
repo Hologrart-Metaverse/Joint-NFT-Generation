@@ -8,6 +8,6 @@ router.get("/get", getCanvases);
 router.post("/create", createCanvas);
 
 router.post("/fetchCanvasPixels", fetchCanvasPixels);
-router.post("/changeCanvas", changePixel);
+router.patch("/changeCanvas", changePixel);
 
 export default router;

@@ -41,19 +41,18 @@ export const fetchCanvasPixels = async (req, res) => {
 export const changePixel = async (req, res) => {
     const { canvas_id, rowNumber, columnNumber, newColor, whose } = req.body;
     try {
-        // let canvas = await Canvases.findOne({_id: canvas_id});
-        // canvas.pixels[rowNumber][columnNumber].color = newColor;
-        // canvas.pixels[rowNumber][columnNumber].who = whose;
-        // await canvas.save();
-        // res.status(200).json({canvas: canvas});
-
-        // console.log(canvas.pixels[rowNumber][columnNumber]);
-
-        const filterPixel = `${rowNumber}.${columnNumber}`;
-        console.log(filterPixel);
 
         // await Canvases.updateOne({_id: canvas_id, pixels: { $elemMatch: { $elemMatch: { id: filterPixel }}}}, {$set: {color: newColor, who: whose}}).then(doc => console.log(doc));
-        // await Canvases.updateOne({_id: canvas_id}, {$set: {"pixels" : {"" : {"id" : filterPixel, color: newColor, who: whose}}}});
+        // const doc = await Canvases.updateOne({_id: canvas_id}, {$set: {filterPixel : {color: newColor, who: whose}}});
+        // const doc = await Canvases.updateOne({_id: canvas_id, "pixels.id": filterPixel}, {$set: { "pixels.$.$.color": newColor, "pixels.$.$.who": whose }});
+        // console.log(doc);
+
+        var deleteMe = await Canvases.findOne({_id: canvas_id});
+        deleteMe.pixels[rowNumber][columnNumber].color = newColor;
+        deleteMe.pixels[rowNumber][columnNumber].who = whose;
+
+        await Canvases.updateOne({_id: canvas_id}, {$set: { pixels: deleteMe.pixels }});
+
         res.status(200).json({color: newColor});
       
     } catch (error) {

@@ -16,7 +16,7 @@ const Pixel = (props) => {
     const [canChangeColor, setCanChangeColor] = useState(true);
 
     const applyColor = () => {
-        setPixelColor(selectedColor);
+        // setPixelColor(selectedColor);
         dispatch(updateCanvas(canvas_id, rowNumber, columnNumber, pixelColor, user._id));
         setCanChangeColor(false);
     }
