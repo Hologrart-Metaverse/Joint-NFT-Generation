@@ -15,6 +15,10 @@ const Pixel = (props) => {
     const [oldColor, setOldColor] = useState(pixelColor);
     const [canChangeColor, setCanChangeColor] = useState(true);
 
+    setInterval(() => {
+      setPixelColor(color);
+    }, 2000)
+
     const applyColor = () => {
         // setPixelColor(selectedColor);
         dispatch(updateCanvas(canvas_id, rowNumber, columnNumber, pixelColor, user._id));
