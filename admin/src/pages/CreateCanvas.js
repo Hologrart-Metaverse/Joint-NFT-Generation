@@ -1,17 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import "./admin.css";
-
+import React, { useState, useEffect } from 'react';
 import FileBase from "react-file-base64";
-import { useDispatch } from 'react-redux';
-import { createCanvas } from '../../actions/Canvases';
 
-const Admin = () => {
-    const dispatch = useDispatch();
+import * as api from "../api";
+
+import "./createCanvas.css";
+
+const CreateCanvas = () => {
 
     const [newCanvas, setNewCanvas] = useState({
         canvasName: "",
-        width: 2,
-        height: 2,
+        width: 32,
+        height: 32,
         image: "",
         pixels: []
     });
@@ -36,6 +35,7 @@ const Admin = () => {
         setNewCanvas({ ...newCanvas, pixels: pixelArray });
     }, [newCanvas.width | newCanvas.height]);
 
+
   return (
     <div className='form'>
         <div className='form-content'>
@@ -48,10 +48,10 @@ const Admin = () => {
               onDone={({base64}) => setNewCanvas({ ...newCanvas, image: base64 })}
             />
 
-            <button onClick={() => dispatch(createCanvas(newCanvas))}>Submit</button>
+            <button onClick={() => api.createCanvas(newCanvas)}>Submit</button>
         </div>
     </div>
   )
 }
 
-export default Admin
+export default CreateCanvas

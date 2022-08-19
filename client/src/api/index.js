@@ -9,6 +9,7 @@ const fetchCanvasesUrl = "http://localhost:8080/canvas/get";
 
 const fetchCanvasUrl = "http://localhost:8080/canvas/fetchCanvasPixels";
 const changePixelUrl = "http://localhost:8080/canvas/changeCanvas";
+const refreshCanvasUrl = "http://localhost:8080/canvas/refresh";
 
 
 export const createUser = (newUser) => axios.post(createUserUrl, newUser);
@@ -25,3 +26,4 @@ export const changePixel =
         axios.patch(changePixelUrl, 
             {canvas_id: canvas_id, rowNumber: rowNumber, columnNumber: columnNumber, newColor: newColor, whose: whose}
         );
+export const refreshCanvas = (canvas_id) => axios.post(refreshCanvasUrl, {id: canvas_id});

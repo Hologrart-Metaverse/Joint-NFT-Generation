@@ -7,7 +7,7 @@ const Row = (props) => {
 
     let pixels = [];
     for (let i = 0; i < rowPixels.length; i++) {
-      console.log(rowPixels[i].color);
+      // console.log(rowPixels[i].color);
       pixels.push(<Pixel key={i} columnNumber={i} color={rowPixels[i].color} whose={rowPixels.who} canvas_id={canvas_id} rowNumber={rowNumber} selectedColor={selectedColor} />);
     }
 

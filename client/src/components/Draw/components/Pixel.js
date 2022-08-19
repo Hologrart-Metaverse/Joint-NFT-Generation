@@ -11,7 +11,7 @@ const Pixel = (props) => {
     const dispatch = useDispatch();
     const { columnNumber, color, whose, canvas_id, rowNumber, selectedColor } = props;
 
-    const [pixelColor, setPixelColor] = useState(color);
+    var [pixelColor, setPixelColor] = useState(color);
     const [oldColor, setOldColor] = useState(pixelColor);
     const [canChangeColor, setCanChangeColor] = useState(true);
 
