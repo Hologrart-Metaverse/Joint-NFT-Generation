@@ -14,14 +14,14 @@ const Draw = () => {
   useEffect(() => {
     document.title = `${location.pathname.split("/")[2].replaceAll("%20", " ")} | Joint NFT Generation`;
     dispatch(fetchCanvasPixels(canvas_id));
-    setInterval(() => {
-      var x = 0;
-      if (x < 1) {
-        dispatch(refreshCanvas(canvas_id));
-        console.log("hekko");
-        x += 1;
-      }
-    }, 5000);
+    // setInterval(() => {
+    //   var x = 0;
+    //   if (x < 1) {
+    //     dispatch(refreshCanvas(canvas_id));
+    //     console.log("hekko");
+    //     x += 1;
+    //   }
+    // }, 5000);
   }, []);
 
 

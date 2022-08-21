@@ -1,4 +1,7 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import {Routes, Route, useNavigate} from "react-router-dom";
+import { loginLocally } from "./actions/Users";
 import Layout from "./Layout";
 import Admin from "./pages/Admin/Admin";
 import Constructor from "./pages/Constructor/Constructor";
@@ -7,13 +10,18 @@ import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 
-// import { useSelector } from 'react-redux';
-// import { useEffect } from "react";
 
 function App() {
-  // const user = useSelector((state) => state.user);
-  // console.log(user);
   const navigation = useNavigate();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const localUser = JSON.parse(localStorage.getItem("currentUser"));
+    console.log(localUser);
+    dispatch(loginLocally(localUser));
+  }, []);
+
+  // const user = useSelector((state) => state.user);
   
   return (
     <div className="App">

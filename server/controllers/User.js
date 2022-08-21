@@ -35,3 +35,20 @@ export const login = async (req, res) => {
         res.status(409);
     }
 }
+
+
+export const loginLocally = async (req, res) => {
+    const user = req.body;
+    try {
+        const isUserExist = await Users.findOne({email: user.email, password: user.password});
+        if (isUserExist !== null) {
+            res.send(isUserExist);
+        }
+        else {
+            res.status(400).json({ message: "deneme" });
+            console.log(isUserExist);
+        }
+    } catch (error) {
+        res.status(409);
+    }
+}

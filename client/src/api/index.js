@@ -3,6 +3,7 @@ import axios from "axios";
 
 const createUserUrl = "http://localhost:8080/user/register";
 const loginUserUrl = "http://localhost:8080/user/login";
+const loginLocallyUrl = "http://localhost:8080/user/login-with-localstorage";
 
 const createCanvasUrl = "http://localhost:8080/canvas/create";
 const fetchCanvasesUrl = "http://localhost:8080/canvas/get";
@@ -14,6 +15,7 @@ const refreshCanvasUrl = "http://localhost:8080/canvas/refresh";
 
 export const createUser = (newUser) => axios.post(createUserUrl, newUser);
 export const loginUser = (user) => axios.post(loginUserUrl, user);
+export const loginLocally = (user) => axios.post(loginLocallyUrl, user);
 
 
 export const createCanvas = (newCanvas) => axios.post(createCanvasUrl, newCanvas);
