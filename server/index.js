@@ -8,6 +8,7 @@ const env = dotenv.config();
 
 import userRoutes from "./routes/User.js";
 import canvasesRoutes from "./routes/Canvas.js";
+import Canvases from "./models/Canvases.js";
 
 const app = express();
 
@@ -34,3 +35,12 @@ mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: tr
 
 app.use("/user", userRoutes);
 app.use("/canvas", canvasesRoutes);
+
+app.get("/canvas/get", async (req, res) => {
+    try {
+        const canvases = await Canvases.find();
+        res.status(200).json(canvases.reverse());
+    } catch (error) {
+        res.status(404).json({ message: error.message});
+    }
+})

@@ -14,7 +14,7 @@ const loginLocallyUrl = `${server}/user/login-with-localstorage`;
 // const createCanvasUrl = "http://localhost:8080/canvas/create";
 // const fetchCanvasesUrl = "http://localhost:8080/canvas/get";
 const createCanvasUrl = `${server}/canvas/create`;
-const fetchCanvasesUrl = `${server}/get`;
+const fetchCanvasesUrl = `${server}/canvas/get`;
 
 // const fetchCanvasUrl = "http://localhost:8080/canvas/fetchCanvasPixels";
 // const changePixelUrl = "http://localhost:8080/canvas/changeCanvas";
