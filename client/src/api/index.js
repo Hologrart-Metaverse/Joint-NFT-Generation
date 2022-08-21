@@ -1,16 +1,27 @@
 import axios from "axios";
 
+// const server = "http://localhost:8080";
+const server = "https://joint-nft-generation-server.vercel.app"
 
-const createUserUrl = "http://localhost:8080/user/register";
-const loginUserUrl = "http://localhost:8080/user/login";
-const loginLocallyUrl = "http://localhost:8080/user/login-with-localstorage";
 
-const createCanvasUrl = "http://localhost:8080/canvas/create";
-const fetchCanvasesUrl = "http://localhost:8080/canvas/get";
+// const createUserUrl = "http://localhost:8080/user/register";
+// const loginUserUrl = "http://localhost:8080/user/login";
+// const loginLocallyUrl = "http://localhost:8080/user/login-with-localstorage";
+const createUserUrl = `${server}/user/register`;
+const loginUserUrl = `${server}/user/login`;
+const loginLocallyUrl = `${server}/user/login-with-localstorage`;
 
-const fetchCanvasUrl = "http://localhost:8080/canvas/fetchCanvasPixels";
-const changePixelUrl = "http://localhost:8080/canvas/changeCanvas";
-const refreshCanvasUrl = "http://localhost:8080/canvas/refresh";
+// const createCanvasUrl = "http://localhost:8080/canvas/create";
+// const fetchCanvasesUrl = "http://localhost:8080/canvas/get";
+const createCanvasUrl = `${server}/canvas/create`;
+const fetchCanvasesUrl = `${server}/get`;
+
+// const fetchCanvasUrl = "http://localhost:8080/canvas/fetchCanvasPixels";
+// const changePixelUrl = "http://localhost:8080/canvas/changeCanvas";
+// const refreshCanvasUrl = "http://localhost:8080/canvas/refresh";
+const fetchCanvasUrl = `${server}/canvas/fetchCanvasPixels`;
+const changePixelUrl = `${server}/canvas/changeCanvas`;
+const refreshCanvasUrl = `${server}/canvas/refresh`;
 
 
 export const createUser = (newUser) => axios.post(createUserUrl, newUser);
