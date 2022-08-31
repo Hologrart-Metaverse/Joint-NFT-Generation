@@ -7,19 +7,20 @@ import img from "./assets/gradienta-7E5kq_sW0Ew-unsplash.jpg";
 
 const Layout = () => {
 
-  const [offsetY, setOffsetY] = useState(0);
+  // const [offsetY, setOffsetY] = useState(0);
 
-  const handleScroll = () => setOffsetY(window.pageYOffset);
+  // const handleScroll = () => setOffsetY(window.pageYOffset);
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   return (
     <div className='body'>
-      <img style={{transform: `translateY(${-offsetY * 0.5}px)`}} className='backgroundImage' src={img}/>
+      {/* <img style={{transform: `translateY(${-offsetY * 0.5}px)`}} className='backgroundImage' src={img}/> */}
+      <img className='backgroundImage' src={img}/>
         <Navbar/>
         <div className='outlet'>
           <Outlet/>
