@@ -44,3 +44,6 @@ mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: tr
 
 app.use("/user", userRoutes);
 app.use("/canvas", canvasesRoutes);
+
+
+module.exports = app
