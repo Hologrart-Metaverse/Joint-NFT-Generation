@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // const server = "http://localhost:8080";
-const server = "https://joint-nft-generation-api.herokuapp.com"
+const server = "https://joint-nft-api.herokuapp.com"
 
 
 // const createUserUrl = "http://localhost:8080/user/register";
