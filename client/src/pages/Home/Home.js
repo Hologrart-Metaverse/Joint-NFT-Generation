@@ -40,9 +40,11 @@ const Home = () => {
         <div className='home-content'>
           <div className='canvases'>
             {
+              canvases ? (
               canvases.map((canvas) => {
                 return <Canvas key={canvas._id} canvas={canvas} />
               })
+              ) : null
             }
             {/* <Canvas title="Mona Lisa" width="32" height="64" img={monaLisa} />
             <Canvas title="The Gypsy Girl Mosaic" width="64" height="64" img={gypsy} />
