@@ -13,6 +13,7 @@ const app = express();
 
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
+// app.use(cors())
 app.use(cors({ origin: "https://joint-nft-generation.vercel.app" }));
 
 const CONNECTION_URL = process.env.CONNECTION2;
@@ -24,12 +25,13 @@ mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: tr
     .catch((err) => console.log(err));
 
 
-app.use("/", (req, res) => {
+
+app.use("/user", userRoutes);
+app.use("/canvas", canvasesRoutes);
+app.use("*", (req, res) => {
     res.status(200).json({
         message: "App is running"
     })
 });
-app.use("/user", userRoutes);
-app.use("/canvas", canvasesRoutes);
 
 export default app;

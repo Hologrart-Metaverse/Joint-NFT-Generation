@@ -40,8 +40,8 @@ const Home = () => {
         <div className='home-content'>
           <div className='canvases'>
             {
-              Object.keys(canvases).map((canvas, index) => {
-                return <Canvas key={index} canvas={canvas} />
+              canvases.map((canvas, index) => {
+                return <Canvas key={canvas._id} canvas={canvas} />
               })
             }
             {/* <Canvas title="Mona Lisa" width="32" height="64" img={monaLisa} />
