@@ -9,7 +9,7 @@ const Pixel = (props) => {
   const user = useSelector((state) => state.user);
 
     const dispatch = useDispatch();
-    const { columnNumber, color, whose, canvas_id, rowNumber, selectedColor } = props;
+    const { columnNumber, color, whose, canvas_id, rowNumber, selectedColor, setBuyAlert } = props;
 
     var [pixelColor, setPixelColor] = useState(color);
     const [oldColor, setOldColor] = useState(pixelColor);
@@ -28,6 +28,7 @@ const Pixel = (props) => {
     const changeColorOnHover = () => {
         setOldColor(pixelColor);
         setPixelColor(selectedColor);
+        setBuyAlert(true);
     }
 
     const resetColor = () => {
@@ -35,6 +36,7 @@ const Pixel = (props) => {
           setPixelColor(oldColor);
         }
         setCanChangeColor(true);
+        setBuyAlert(false);
     }
   return (
     <div

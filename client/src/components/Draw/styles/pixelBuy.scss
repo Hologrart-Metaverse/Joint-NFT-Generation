@@ -1,0 +1,30 @@
+.pixel-sale {
+    display: none;
+
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 255, 255, 0.421);
+
+    // border: 1px solid black;
+    border-radius: 15px;
+    max-width: 150px;
+    width: 150px;
+    padding: 10px 0px;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+
+    p {
+        font-size: 0.7rem;
+        margin: 0;
+        font-weight: 600;
+    }
+
+    .buy {
+        margin-top: 10px;
+        font-size: 1rem;
+    }
+}

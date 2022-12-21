@@ -36,6 +36,7 @@ const Register = () => {
             <h1>Register</h1>
 
             <div className='register-inputs'>
+                <TextField sx={{ m: "20px 0", width: '100%' }} className='name-input' fullWidth label="Wallet Address"  />
                 <TextField sx={{ m: "20px 0", width: '100%' }} className='name-input' fullWidth label="Full Name" value={newUser.fullName} onChange={e => setNewUser({...newUser, fullName: e.target.value})} />
                 <TextField className='email-input' fullWidth label="Email" value={newUser.email} onChange={e => setNewUser({...newUser, email: e.target.value})} />
                 <FormControl className='password-input' sx={{ m: "20px 0", width: '100%' }} variant="outlined">

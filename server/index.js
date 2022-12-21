@@ -13,15 +13,23 @@ const app = express();
 
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
-app.use(cors()); 
+app.use(cors({ origin: "https://joint-nft-generation.vercel.app" }));
 
 const CONNECTION_URL = process.env.CONNECTION2;
 const PORT = process.env.PORT || 8080;
 
+mongoose.set('strictQuery', true);
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => app.listen(PORT, () => console.log(`Server running on port ${PORT}`)))
     .catch((err) => console.log(err));
 
 
+app.use("/", (req, res) => {
+    res.status(200).json({
+        message: "App is running"
+    })
+});
 app.use("/user", userRoutes);
 app.use("/canvas", canvasesRoutes);
+
+export default app;

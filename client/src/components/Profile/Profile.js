@@ -19,8 +19,9 @@ const Profile = () => {
         <img className='profile-img' src={me}></img>
         <h1 className='profile-name'>{user.fullName}</h1>
 
-        <div className='profile-links'>Total Pixel: 123</div>
-        <div className='profile-links'>Total profit: $67</div>
+        <div className='profile-links'>Hologrart Coin: 145.0023230032</div>
+        <div className='profile-links'>Total Pixel: 200</div>
+        <div className='profile-links'>Total profit: $98</div>
         <div onClick={() => navigation("/shop")} className='profile-links profile-links-buttons'>Shop</div>
         <div onClick={() => navigation("/my-draws")} className='profile-links profile-links-buttons'>My Draws</div>
         <div onClick={() => dispatch(logout())} className='profile-links profile-links-buttons'><LogoutIcon /> Logout</div>

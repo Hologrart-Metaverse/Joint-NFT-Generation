@@ -9,6 +9,7 @@ import Draw from "./pages/Draw/Draw";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
+import Shop from "./pages/Shop/Shop";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route index element={<Home />}/>
           <Route path="/login" element={<Login />}/>
           <Route path="/register" element={<Register />}/>
+          <Route path="/shop" element={<Shop />}/>
           <Route path="*" element={<Constructor />}/>
           <Route path="/draw" element={<Draw />}/>
           <Route path="/draw/:id" element={<Draw />}/>

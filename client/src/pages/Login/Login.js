@@ -58,6 +58,10 @@ const Login = () => {
                     label="Password"
                   />
                 </FormControl>
+                <hr/>
+                <FormControl sx={{ mb: "20px", width: '100%' }} variant="outlined">
+                  <TextField className='email-input' fullWidth label="Wallet Address" />
+                </FormControl>
             </div>
 
             <div className='login-buttons'>
