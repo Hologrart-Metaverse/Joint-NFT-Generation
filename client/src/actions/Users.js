@@ -1,6 +1,5 @@
 import * as api from "../api";
 
-
 export const createUser = (user) => async (dispatch) => {
     try {
         const { data } = await api.createUser(user);
@@ -8,8 +7,7 @@ export const createUser = (user) => async (dispatch) => {
     } catch (error) {
         console.log(error);
     }
-}
-
+};
 
 export const login = (user) => async (dispatch) => {
     try {
@@ -19,7 +17,7 @@ export const login = (user) => async (dispatch) => {
     } catch (error) {
         console.log(error);
     }
-}
+};
 
 export const loginLocally = (user) => async (dispatch) => {
     try {
@@ -29,7 +27,7 @@ export const loginLocally = (user) => async (dispatch) => {
         console.log(error);
         console.log("No User Exist");
     }
-}
+};
 
 
 export const logout = () => async (dispatch) => {
@@ -39,4 +37,4 @@ export const logout = () => async (dispatch) => {
     } catch (error) {
         console.log(error);
     }
-}
+};

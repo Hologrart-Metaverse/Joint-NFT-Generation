@@ -52,11 +52,14 @@
     cursor: pointer;
     transition: 0.3s ease-out;
 }
-.canvas:hover, .canvas-blank:hover{
+
+.canvas:hover,
+.canvas-blank:hover {
     backdrop-filter: blur(35px);
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
 }
-.canvas:hover .canvas-title{
+
+.canvas:hover .canvas-title {
     text-decoration: underline;
 }
 
@@ -80,7 +83,7 @@
     margin: -15px 0;
 }
 
-.canvas-userCount{
+.canvas-userCount {
     flex: 1;
     font-size: 14px;
     text-align: right;

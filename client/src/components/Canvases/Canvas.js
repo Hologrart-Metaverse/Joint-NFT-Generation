@@ -2,18 +2,17 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./canvas.css";
 
-
-
-const Canvas = (props) => {
-  const canvas = props.canvas;
+const Canvas = ({ canvas }) => {
   const navigation = useNavigate();
+
+  const handleCanvasClick = () => {
+    // navigation(`/draw/${canvas.canvasName}?width=${canvas.width}&height=${canvas.height}`)
+    navigation(`/draw/${canvas.canvasName}?id=${canvas._id}`);
+    // window.location.reload();
+  };
+
   return (
-    // <div onClick={() => navigation(`/draw/${canvas.canvasName}?width=${canvas.width}&height=${canvas.height}`)} className='canvas'>
-    <div onClick={() => {
-      navigation(`/draw/${canvas.canvasName}?id=${canvas._id}`)
-      // window.location.reload();
-    }
-    } className='canvas'>
+    <div onClick={handleCanvasClick} className='canvas'>
       <div className='canvas-top'>
         <div className='canvas-top-title'>
           <p>About:</p>
@@ -31,7 +30,7 @@ const Canvas = (props) => {
       </div>
       <img className='canvas-image' src={canvas.image} />
     </div>
-  )
-}
+  );
+};
 
-export default Canvas
+export default Canvas;

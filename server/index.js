@@ -4,17 +4,17 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 
 import dotenv from "dotenv";
-const env = dotenv.config();
+dotenv.config();
 
 import userRoutes from "./routes/User.js";
 import canvasesRoutes from "./routes/Canvas.js";
+import { config } from "./config/cors.js";
 
 const app = express();
 
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
-// app.use(cors())
-app.use(cors({ origin: "https://joint-nft-generation.vercel.app" }));
+app.use(cors(config));
 
 const CONNECTION_URL = process.env.CONNECTION2;
 const PORT = process.env.PORT || 8080;
@@ -31,7 +31,7 @@ app.use("/canvas", canvasesRoutes);
 app.use("*", (req, res) => {
     res.status(200).json({
         message: "App is running"
-    })
+    });
 });
 
 export default app;
