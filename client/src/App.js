@@ -13,6 +13,7 @@ import Login from "./pages/Login/Login";
 import Shop from "./pages/Shop/Shop";
 import Constructor from "./pages/Constructor/Constructor";
 import Register from "./pages/Register/Register";
+import SahneXL from "./pages/SpecialEvent/SahneXL";
 
 function App() {
   const dispatch = useDispatch();
@@ -36,6 +37,7 @@ function App() {
           <Route path="*" element={<Constructor />} />
           <Route path="/draw" element={<Draw />} />
           <Route path="/draw/:id" element={<Draw />} />
+          <Route path="/sahneXL" element={<SahneXL />} />
         </Route>
         <Route path="/admin" element={<Admin />} />
       </Routes>

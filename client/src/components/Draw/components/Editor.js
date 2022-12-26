@@ -3,7 +3,7 @@ import "../styles/editor.scss";
 
 import DrawingPanel from './DrawingPanel';
 
-import { SketchPicker } from "react-color";
+import { SketchPicker, HuePicker } from "react-color";
 import { useSelector } from 'react-redux';
 
 const Editor = ({ canvasPixels, canvas_id, setBuyAlert }) => {
@@ -28,9 +28,10 @@ const Editor = ({ canvasPixels, canvas_id, setBuyAlert }) => {
     
   return (
     <div className='drawEditor'>
-      {
+      {/* {
         user.length !== 0 ? (<SketchPicker className='sketchPicker' color={selectedColor} onChange={changeColor} />) : null
-      }
+      } */}
+      <HuePicker className='sketchPicker' color={selectedColor} onChange={changeColor} />
       {
         // canvasPixels[1] ? <DrawingPanel className='DrawingPanel' width={canvasPixels[1].length} height={canvasPixels.length} selectedColor={selectedColor} /> : null
         canvasPixels[1] ? <DrawingPanel className='DrawingPanel' setBuyAlert={setBuyAlert} pixels={canvasPixels} canvas_id={canvas_id} selectedColor={selectedColor} /> : null

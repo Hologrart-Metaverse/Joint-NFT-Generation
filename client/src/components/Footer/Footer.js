@@ -15,6 +15,8 @@ import { FaDiscord } from 'react-icons/fa';
 
 import SendIcon from '@mui/icons-material/Send';
 
+import hologrart from "../../assets/hologrartLogo.png";
+
 const Footer = () => {
 
   const [email, setEmail] = useState("");
@@ -32,7 +34,7 @@ const Footer = () => {
           <div className='footer_top_firstColon'>
             
             <div className='footer_top_firstColon_header'>
-              <img className='footer_top_firstColon_header_image' src='https://picsum.photos/200' />
+              <img className='footer_top_firstColon_header_image' src={hologrart} />
               <h2>Hologrart</h2>
             </div>
             
@@ -55,17 +57,6 @@ const Footer = () => {
           <div className='footer_top_secondColon'>
             <h2>Products</h2>
             <ul className='footer_top_secondColon_list'>
-              <li className='footer_top_secondColon_list_item'>Joint NFT Generation</li>
-              <li className='footer_top_secondColon_list_item'>Joint NFT Generation</li>
-              <li className='footer_top_secondColon_list_item'>Joint NFT Generation</li>
-              <li className='footer_top_secondColon_list_item'>Joint NFT Generation</li>
-              <li className='footer_top_secondColon_list_item'>Joint NFT Generation</li>
-              <li className='footer_top_secondColon_list_item'>Joint NFT Generation</li>
-              <li className='footer_top_secondColon_list_item'>Joint NFT Generation</li>
-              <li className='footer_top_secondColon_list_item'>Joint NFT Generation</li>
-              <li className='footer_top_secondColon_list_item'>Joint NFT Generation</li>
-              <li className='footer_top_secondColon_list_item'>Joint NFT Generation</li>
-              <li className='footer_top_secondColon_list_item'>Joint NFT Generation</li>
               <li className='footer_top_secondColon_list_item'>Joint NFT Generation</li>
             </ul>
           </div>

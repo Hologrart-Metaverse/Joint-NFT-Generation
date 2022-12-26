@@ -115,3 +115,23 @@
     border-radius: 15px;
     margin-top: 10px;
 }
+
+
+@media screen and (max-width: 450px) {
+    .canvas-blank {
+        width: 80vw;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        margin-right: 0;
+        padding: 20px;
+    }
+
+    .canvas {
+        width: 80vw;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        margin-right: 0;
+        margin-left: 0;
+        padding: 20px;
+    }
+}

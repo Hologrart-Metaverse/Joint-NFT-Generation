@@ -19,10 +19,10 @@ const Canvas = ({ canvas }) => {
           <h2 className='canvas-title'>{canvas.canvasName}</h2>
           <p>{canvas.width} x {canvas.height}</p>
         </div>
-        <div className='canvas-userCount'>
+        {/* <div className='canvas-userCount'>
           <p className='userCount'>Instant User Count: <span>{canvas.instantUserCount}</span></p>
           <p className='userCount'>Total User Count: <span>{canvas.totalUserCount}</span></p>
-        </div>
+        </div> */}
       </div>
       <div className='canvas-dates'>
         <p className='start-date'>Starting At: <span>{canvas.createdAt}</span></p>

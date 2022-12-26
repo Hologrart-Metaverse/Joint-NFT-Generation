@@ -17,3 +17,28 @@
     flex: 2;
 }
 
+
+
+@media screen and (max-width: 450px) {
+    .userProfile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .canvases{
+        display: flex;
+        flex: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .userProfile {
+        flex: 0;
+    }
+
+    .profile {
+        max-width: 100vw;
+    }
+}

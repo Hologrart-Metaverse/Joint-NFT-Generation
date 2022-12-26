@@ -49,17 +49,17 @@ const Draw = () => {
     };
   }, [canvas_id, dispatch, location.pathname]);
 
-  useEffect(() => {
-    let buy = document.querySelector(".pixel-sale");
+  // useEffect(() => {
+  //   let buy = document.querySelector(".pixel-sale");
 
-    if (buyAlert) {
-      buy.style.display = "flex";
-      buy.style.transform = `translate(${mouseX + 30}px, ${mouseY + 30}px)`;
-      // buy.style.transform = `translateY(${mouseY}px)`;
-    } else {
-      buy.style.display = "none";
-    }
-  }, [buyAlert, mouseX, mouseY]);
+  //   if (buyAlert) {
+  //     buy.style.display = "flex";
+  //     buy.style.transform = `translate(${mouseX + 30}px, ${mouseY + 30}px)`;
+  //     // buy.style.transform = `translateY(${mouseY}px)`;
+  //   } else {
+  //     buy.style.display = "none";
+  //   }
+  // }, [buyAlert, mouseX, mouseY]);
 
   return (
     <div className='draw'>
@@ -71,7 +71,7 @@ const Draw = () => {
             setBuyAlert={setBuyAlert} />
         )}
       </div>
-      <PixelBuy />
+      {/* <PixelBuy /> */}
     </div>
   );
 };
