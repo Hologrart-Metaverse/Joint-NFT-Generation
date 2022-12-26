@@ -44,14 +44,7 @@ const Home = () => {
                 return <Canvas key={canvas._id} canvas={canvas} />
               })
             }
-            {/* <Canvas title="Mona Lisa" width="32" height="64" img={monaLisa} />
-            <Canvas title="The Gypsy Girl Mosaic" width="64" height="64" img={gypsy} />
-            <Canvas title="Summer Holiday" width="32" height="32" img={summerHoliday} />
-            <Canvas title="Birthday" width="32" height="16" img={birthday} />
-            <Canvas title="Concert" width="64" height="64" img={concert} />
-            <Canvas title="Metaverse" width="32" height="32" img={metaverse} />
-            <Canvas title="Blockchain" width="64" height="32" img={blockchain} />
-            <Canvas title="29th October" width="64" height="32" img={october} /> */}
+            
           </div>
           <div className='userProfile'>
             {
