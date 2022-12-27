@@ -5,7 +5,7 @@ import Canvas from '../../components/Canvases/Canvas';
 import Profile from '../../components/Profile/Profile';
 
 
-import sahne from "../../assets/pxArt-mini.png";
+import sahne from "../../assets/pxArt-mini-square.png";
 
 import { useDispatch, useSelector } from 'react-redux';
 import Blank from '../../components/Canvases/Blank';
@@ -32,7 +32,12 @@ const Home = () => {
           <div className='canvases'>
             {
               canvases.map((canvas, index) => {
-                return <Canvas key={canvas._id} canvas={canvas} />
+                if (index == 0){
+                  return
+                }
+                else{
+                  return <Canvas key={canvas._id} canvas={canvas} />
+                }
               })
             }
             
@@ -41,7 +46,7 @@ const Home = () => {
             {
               user.length !== 0 ? (<Profile className="profile" />) : null
             }
-            <Blank title="Sahne XL Event" width="64" height="64" img={sahne} />
+            <Blank title="Sahne XL Event" width="16" height="16" img={sahne} />
           </div>
         </div>
       </div>

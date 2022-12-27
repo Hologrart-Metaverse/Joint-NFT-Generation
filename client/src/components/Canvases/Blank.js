@@ -8,7 +8,7 @@ const Blank = ({ title, width, height, img }) => {
   const redirect = 'draw/The Scream?id=630f6e9b0bb1c82791e27077'; // buraya ayrı script linki gelecek
 
   const handleCanvasClick = () => {
-    navigation(`/sahneXL`);
+    navigation(`/draw/SahneXL?id=63aaa545acd460164adff240`);
   };
 
   return (

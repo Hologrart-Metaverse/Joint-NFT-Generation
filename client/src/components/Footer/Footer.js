@@ -39,7 +39,7 @@ const Footer = () => {
             </div>
             
             <div className='footer_top_firstColon_desc'>
-              <p>Mollit commodo aliquip nisi sunt mollit consequat ullamco aute. Et cillum irure in proident nostrud eiusmod reprehenderit veniam. Cupidatat ipsum exercitation aliquip aliqua officia adipisicing labore cupidatat et fugiat excepteur do amet deserunt. Id esse reprehenderit velit anim non sint ad. Pariatur dolore aliquip enim est ipsum cillum excepteur. Est excepteur reprehenderit elit in eiusmod sit id fugiat id.</p>
+              <p>Hologrart, metaverse için Web3 altyapısı ve blockchain ile geliştirilen; kültür, sanat, eğlencede NFT odaklı ve bazı stratejik sektörlerde blockchain tabanlı finans kullanarak iş süreç çözümlerine odaklanan bir girişimdir.</p>
             </div>
 
             <div className='footer_top_firstColon_links'>
@@ -75,7 +75,7 @@ const Footer = () => {
               </div>
 
               <div className='footer_top_thirdColon_contacts_phone'>
-                <p><span><PhoneIcon style={{fontSize:"20px"}}/> Phone:</span> +90 (511) 999 88 77 </p>
+                <p><span><PhoneIcon style={{fontSize:"20px"}}/> Phone:</span> +90 (507) 008 02 77 </p>
               </div>
 
               <div className='footer_top_thirdColon_contacts_dm'>

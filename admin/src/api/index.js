@@ -1,5 +1,5 @@
 import axios from "axios";
 
-const createCanvasUrl = "http://localhost:8080/canvas/create";
+const createCanvasUrl = "https://joint-nft-api.herokuapp.com/canvas/create";
 
 export const createCanvas = (newCanvas) => axios.post(createCanvasUrl, newCanvas);
