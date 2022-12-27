@@ -26,7 +26,7 @@ const Navbar = () => {
               <Link className='navbar_link' to="/">Home</Link>
               <Link className='navbar_link' to="/shop">Shop</Link>
               <Link className='navbar_link' to="/my-draws">My Draws</Link>
-              <a onClick={() => setIsOpen(!isOpen)} style={{display: "flex", alignItems: "center"}} className='navbar_link'>Products <ArrowDropDownIcon/></a>
+              {/* <a onClick={() => setIsOpen(!isOpen)} style={{display: "flex", alignItems: "center"}} className='navbar_link'>Products <ArrowDropDownIcon/></a> */}
               <img onClick={() => navigation("./profile")} className='navbar_link navbar-profile' src={me} />
 
             

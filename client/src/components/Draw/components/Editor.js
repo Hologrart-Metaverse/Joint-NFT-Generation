@@ -36,6 +36,8 @@ const Editor = ({ canvasPixels, canvas_id, setBuyAlert }) => {
         // canvasPixels[1] ? <DrawingPanel className='DrawingPanel' width={canvasPixels[1].length} height={canvasPixels.length} selectedColor={selectedColor} /> : null
         canvasPixels[1] ? <DrawingPanel className='DrawingPanel' setBuyAlert={setBuyAlert} pixels={canvasPixels} canvas_id={canvas_id} selectedColor={selectedColor} /> : null
       }
+
+      <p className='bottom-message'>Bir renk seçerek pixeli boya ve eseri oluşturmaya katkı sağla 🚀</p>
         
     </div>
   )
