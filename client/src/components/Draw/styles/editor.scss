@@ -74,8 +74,16 @@
 .sketchPicker {
   position: fixed;
   z-index: 0;
-  top: 45vh;
+  // top: 45vh;
   // bottom: 30px;
+  margin: 30px;
+}
+
+.huePicker {
+  position: fixed;
+  z-index: 0;
+  top: 45vh;
+  bottom: 0;
   margin: auto;
 }
 
