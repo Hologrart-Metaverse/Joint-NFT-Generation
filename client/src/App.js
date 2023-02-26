@@ -39,7 +39,7 @@ function App() {
           <Route path="/draw/:id" element={<Draw />} />
           <Route path="/sahneXL" element={<SahneXL />} />
         </Route>
-        <Route path="/admin" element={<Admin />} />
+        {/* <Route path="/admin" element={<Admin />} /> */}
       </Routes>
     </div>
   );
