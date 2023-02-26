@@ -23,7 +23,6 @@ const Pixel = (props) => {
     // setPixelColor(selectedColor);
     dispatch(updateCanvas(canvas_id, rowNumber, columnNumber, pixelColor, user._id));
     setCanChangeColor(false);
-    alert("Tebrikler, sen de SahneXL'ın tamamlanmasına destek olarak Yeni Nesil NFT üretiminde yerini aldın 🚀");
   };
 
   const changeColorOnHover = () => {

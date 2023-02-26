@@ -9,21 +9,15 @@ const server = axios.create({
 // const server = "https://joint-nft-api.herokuapp.com";
 
 
-// const createUserUrl = "http://localhost:8080/user/register";
-// const loginUserUrl = "http://localhost:8080/user/login";
-// const loginLocallyUrl = "http://localhost:8080/user/login-with-localstorage";
 const createUserUrl = `/user/register`;
 const loginUserUrl = `/user/login`;
 const loginLocallyUrl = `/user/login-with-localstorage`;
 
-// const createCanvasUrl = "http://localhost:8080/canvas/create";
-// const fetchCanvasesUrl = "http://localhost:8080/canvas/get";
+
 const createCanvasUrl = `/canvas/create`;
 const fetchCanvasesUrl = `/canvas/get`;
 
-// const fetchCanvasUrl = "http://localhost:8080/canvas/fetchCanvasPixels";
-// const changePixelUrl = "http://localhost:8080/canvas/changeCanvas";
-// const refreshCanvasUrl = "http://localhost:8080/canvas/refresh";
+
 const fetchCanvasUrl = `/canvas/fetchCanvasPixels`;
 const changePixelUrl = `/canvas/changeCanvas`;
 const refreshCanvasUrl = `/canvas/refresh`;
