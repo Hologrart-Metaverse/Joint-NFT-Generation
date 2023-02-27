@@ -11,11 +11,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import Blank from '../../components/Canvases/Blank';
 import { getCanvases } from '../../actions/Canvases';
 
+import { useLocation } from 'react-router-dom';
+
 const Home = () => {
 
   const user = useSelector((state) => state.user);
   const canvases = useSelector((state) => state.canvases);
+
   const dispatch = useDispatch();
+  const location = useLocation();
 
 
   console.log(canvases);
@@ -24,6 +28,9 @@ const Home = () => {
     document.title = "Home | Hologrart Metaverse";
     dispatch(getCanvases());
   }, []);
+
+  useEffect(() => {dispatch({ type: "EXIT" });}, [location.search]);
+
   
   return (
     <div style={{color: "white"}}>

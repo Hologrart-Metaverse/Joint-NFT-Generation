@@ -9,6 +9,10 @@ export default (canvas_pixels=[], action) => {
         case "REFRESH":
             return action.payload;
             break;
+        case "EXIT":
+            return [];
+            break;
+            
     
         default:
             return canvas_pixels;
